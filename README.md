@@ -1,6 +1,6 @@
 # ✨ Chat Multicliente en Java ✨
 
-<img src="https://media.giphy.com/media/26xBwdIuRJiAIqHwA/giphy.gif" alt="Chat Banner" width="500"/>
+<img src="https://media.giphy.com/media/26xBwdIuRJiAIqHwA/giphy.gif" alt="Chat Banner" width="200"/>
 
 Este proyecto es una implementación de un chat multicliente en Java que permite la comunicación en tiempo real entre un servidor y varios clientes conectados a él.
 
