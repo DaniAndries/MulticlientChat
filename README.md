@@ -1,23 +1,27 @@
-# ✨ Chat Multicliente en Java ✨
+# ✨ Multi-client Chat in Java ✨
 
-Este proyecto es una implementación de un chat multicliente en Java que permite la comunicación en tiempo real entre un servidor y varios clientes conectados a él.
+<div align="center">
+  <img src="https://media.giphy.com/media/26xBwdIuRJiAIqHwA/giphy.gif" alt="Chat Banner" width="250"/>
+</div>
 
-## 🚀 Características
+This project is an implementation of a multi-client chat in Java that enables real-time communication between a server and multiple connected clients.
 
-- **🖥️ Servidor centralizado:** Administra las conexiones y retransmite los mensajes a todos los clientes.
-- **👥 Clientes múltiples:** Los usuarios pueden conectarse al servidor desde diferentes instancias del cliente.
-- **⚡ Mensajes en tiempo real:** Los mensajes se transmiten instantáneamente entre los usuarios conectados.
-- **⌨️ Interfaz de consola:** Tanto el servidor como los clientes operan desde la línea de comandos.
+## 🚀 Features
 
-## 🛠️ Requisitos
+- **🖥️ Centralized Server:** Manages connections and relays messages to all clients.
+- **👥 Multiple Clients:** Users can connect to the server from different client instances.
+- **⚡ Real-time Messaging:** Messages are instantly transmitted between connected users.
+- **⌨️ Console Interface:** Both the server and clients operate via the command line.
 
-- **Java Development Kit (JDK):** Versión 8 o superior.
-- **IDE o Editor de texto:** Recomendado IntelliJ IDEA, Eclipse, VS Code, o cualquier editor con soporte para Java.
+## 🛠️ Requirements
 
-## 🗂️ Estructura del proyecto
+- **Java Development Kit (JDK):** Version 8 or higher.
+- **IDE or Text Editor:** Recommended IntelliJ IDEA, Eclipse, VS Code, or any editor with Java support.
+
+## 🗂️ Project Structure
 
 ```
-chat-multicliente-java/
+chat-multiclient-java/
 ├── src/
 │   ├── server/
 │   │   └── ChatServer.java
@@ -28,91 +32,91 @@ chat-multicliente-java/
 └── build/
 ```
 
-- `ChatServer.java`: Código fuente del servidor.
-- `ChatClient.java`: Código fuente del cliente.
-- `README.md`: Documentación del proyecto.
+- `ChatServer.java`: Server source code.
+- `ChatClient.java`: Client source code.
+- `README.md`: Project documentation.
 
-## ⚙️ Configuración y Ejecución
+## ⚙️ Setup and Execution
 
-### 🖥️ Servidor
+### 🖥️ Server
 
-1. Navega al directorio del servidor:
+1. Navigate to the server directory:
 
    ```bash
    cd src/server
    ```
 
-2. Compila el código:
+2. Compile the code:
 
    ```bash
    javac ChatServer.java
    ```
 
-3. Ejecuta el servidor:
+3. Run the server:
 
    ```bash
-   java ChatServer <puerto>
+   java ChatServer <port>
    ```
 
-   Reemplaza `<puerto>` por el número de puerto que deseas usar.
+   Replace `<port>` with the port number you want to use.
 
-### 💻 Cliente
+### 💻 Client
 
-1. Navega al directorio del cliente:
+1. Navigate to the client directory:
 
    ```bash
    cd src/client
    ```
 
-2. Compila el código:
+2. Compile the code:
 
    ```bash
    javac ChatClient.java
    ```
 
-3. Ejecuta el cliente:
+3. Run the client:
 
    ```bash
-   java ChatClient <host> <puerto>
+   java ChatClient <host> <port>
    ```
 
-   - `<host>`: Dirección IP o nombre de host del servidor.
-   - `<puerto>`: Número de puerto en el que está escuchando el servidor.
+   - `<host>`: IP address or hostname of the server.
+   - `<port>`: Port number where the server is listening.
 
-## 📝 Uso
+## 📝 Usage
 
-1. Inicia el servidor con el comando mencionado anteriormente.
-2. Conecta varios clientes al servidor utilizando la dirección IP y el puerto configurados.
-3. Los clientes pueden enviar mensajes que se retransmitirán a todos los usuarios conectados.
+1. Start the server using the command mentioned above.
+2. Connect multiple clients to the server using the configured IP address and port.
+3. Clients can send messages that will be broadcast to all connected users.
 
-## 📋 Ejemplo
+## 📋 Example
 
-### Salida del Servidor:
-
-```
-Servidor iniciado en el puerto 12345...
-Cliente conectado: 192.168.1.2
-Cliente conectado: 192.168.1.3
-Mensaje de 192.168.1.2: Hola a todos!
-Mensaje de 192.168.1.3: Hola!
-```
-
-### Salida de un Cliente:
+### Server Output:
 
 ```
-Conectado al servidor en localhost:12345
-Ingrese su mensaje: Hola a todos!
-Mensaje recibido: Hola!
+Server started on port 12345...
+Client connected: 192.168.1.2
+Client connected: 192.168.1.3
+Message from 192.168.1.2: Hello everyone!
+Message from 192.168.1.3: Hi there!
 ```
 
-## 🤝 Contribuciones
+### Client Output:
 
-¡Las contribuciones son bienvenidas! Por favor, abre un *issue* o envía un *pull request* para sugerir mejoras o corregir errores.
+```
+Connected to server at localhost:12345
+Enter your message: Hello everyone!
+Message received: Hi there!
+```
 
-## 📜 Licencia
+## 🤝 Contributions
 
-Este proyecto está licenciado bajo la [MIT License](LICENSE).
+Contributions are welcome! Please open an *issue* or submit a *pull request* to suggest improvements or fix bugs.
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-¡Gracias por usar este proyecto! Si te ha sido útil, no olvides darle una ⭐ al repositorio en GitHub. 🚀
+Thank you for using this project! If you found it helpful, don't forget to give the repository a ⭐ on GitHub. 🚀
