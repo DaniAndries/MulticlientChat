@@ -80,7 +80,7 @@
          <center>
             <ImageView fitHeight="111.0" fitWidth="292.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                <image>
-                  <Image url="@../images/Leonardo_Phoenix_10_An_illustration_of_a_JavaFX_badge_for_a_ch_2.png" />
+                  <Image url="@../images/badge.png" />
                </image>
                <BorderPane.margin>
                   <Insets right="100.0" top="5.0" />
@@ -92,7 +92,7 @@
                <children>
                   <ImageView fitHeight="27.0" fitWidth="33.0" onMousePressed="#closeApplication" pickOnBounds="true" preserveRatio="true" styleClass="button">
                      <image>
-                        <Image url="@../images/icons8-close-window-100.png" />
+                        <Image url="@../images/close100.png" />
                      </image>
                      <HBox.margin>
                         <Insets right="20.0" top="22.0" />
