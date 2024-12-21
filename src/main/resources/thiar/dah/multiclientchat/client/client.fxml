@@ -17,13 +17,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPane" maxHeight="620.0" maxWidth="1040.0" prefHeight="620.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.chatwindow.ChatController">
+<BorderPane fx:id="borderPane" maxHeight="620.0" maxWidth="1040.0" prefHeight="620.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thiar.dah.multiclientchat.client.controller.ClientController">
    <center>
       <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
          <children>
             <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pannable="true" prefHeight="496.0" vbarPolicy="ALWAYS" vmin="1.0" vvalue="1.0" VBox.vgrow="ALWAYS">
                <content>
-                  <ListView fx:id="chatPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView fx:id="chatPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@../styles/ChatViewStyle.css" />
                </content>
             </ScrollPane>
             <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="100.0" VBox.vgrow="NEVER">
@@ -39,8 +39,7 @@
                         <Insets />
                      </HBox.margin>
                   </TextArea>
-                  <Button fx:id="buttonSend" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sendButtonAction" prefHeight="43.0" prefWidth="84.0" scaleShape="false" text="Send" textAlignment="CENTER" HBox.hgrow="NEVER" />
-                  <Button fx:id="recordBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMousePressed="#recordVoiceMessage" />
+                  <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sendButtonAction" prefHeight="43.0" prefWidth="84.0" scaleShape="false" text="Send" textAlignment="CENTER" HBox.hgrow="NEVER" />
                </children>
             </HBox>
          </children>
@@ -49,7 +48,7 @@
    <left>
       <VBox maxHeight="1.7976931348623157E308" BorderPane.alignment="CENTER">
          <children>
-            <HBox fx:id="onlineUsersHbox" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="217.0" stylesheets="@../../../../../../../JavaFX-Chat-master/client/src/main/resources/styles/ListViewStyle.css">
+            <HBox fx:id="onlineUsersHbox" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="217.0" stylesheets="@../styles/ListViewStyle.css">
                <children>
                   <Label prefHeight="50.0" prefWidth="124.0" text="Online Users:" textAlignment="CENTER" textFill="#3fb569">
                      <font>
@@ -72,7 +71,7 @@
                   </Label>
                </children>
             </HBox>
-            <ListView fx:id="userList" focusTraversable="false" maxHeight="1.7976931348623157E308" prefHeight="495.0" prefWidth="217.0" style="-fx-border-image-width: 0;" stylesheets="@../../../../../../../JavaFX-Chat-master/client/src/main/resources/styles/ListViewStyle.css" />
+            <ListView fx:id="userList" focusTraversable="false" maxHeight="1.7976931348623157E308" prefHeight="495.0" prefWidth="217.0" style="-fx-border-image-width: 0;" stylesheets="@../styles/ListViewStyle.css" />
          </children>
       </VBox>
    </left>
@@ -81,7 +80,7 @@
          <center>
             <ImageView fitHeight="111.0" fitWidth="292.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                <image>
-                  <Image url="@images/Leonardo_Phoenix_10_An_illustration_of_a_JavaFX_badge_for_a_ch_2.png" />
+                  <Image url="@../images/Leonardo_Phoenix_10_An_illustration_of_a_JavaFX_badge_for_a_ch_2.png" />
                </image>
                <BorderPane.margin>
                   <Insets right="100.0" top="5.0" />
@@ -89,11 +88,11 @@
             </ImageView>
          </center>
          <right>
-            <HBox prefHeight="79.0" prefWidth="17.0" stylesheets="@../../../../../../../JavaFX-Chat-master/client/src/main/resources/styles/ButtonStyle.css" BorderPane.alignment="CENTER">
+            <HBox prefHeight="79.0" prefWidth="17.0" stylesheets="@../styles/ButtonStyle.css" BorderPane.alignment="CENTER">
                <children>
                   <ImageView fitHeight="27.0" fitWidth="33.0" onMousePressed="#closeApplication" pickOnBounds="true" preserveRatio="true" styleClass="button">
                      <image>
-                        <Image url="@images/icons8-close-window-100.png" />
+                        <Image url="@../images/icons8-close-window-100.png" />
                      </image>
                      <HBox.margin>
                         <Insets right="20.0" top="22.0" />
@@ -110,7 +109,7 @@
                <children>
                   <ImageView fx:id="userImageView" fitHeight="69.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../../JavaFX-Chat-master/client/src/main/resources/images/default.png" />
+                        <Image url="@../images/default.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="10.0" top="7.0" />
@@ -126,7 +125,7 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Label>
-                        <ComboBox fx:id="statusComboBox" prefHeight="25.0" prefWidth="101.0" promptText="Online" stylesheets="@../../../../../../../JavaFX-Chat-master/client/src/main/resources/styles/ComboBox.css">
+                        <ComboBox fx:id="statusComboBox" prefHeight="25.0" prefWidth="101.0" promptText="Online" stylesheets="@../styles/ComboBox.css">
                            <items>
                               <FXCollections fx:factory="observableArrayList">
                                  <String fx:value="Online" />

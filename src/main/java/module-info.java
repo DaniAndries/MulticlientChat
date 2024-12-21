@@ -11,6 +11,9 @@ module thiar.dah.multiclientchat {
     requires eu.hansolo.tilesfx;
     requires java.desktop;
 
+    opens thiar.dah.multiclientchat.server.controller to javafx.fxml; // Permite el acceso a JavaFX
+    opens thiar.dah.multiclientchat.client.controller to javafx.fxml; // Permite el acceso a JavaFX
     opens thiar.dah.multiclientchat to javafx.fxml;
     exports thiar.dah.multiclientchat;
+
 }

@@ -9,15 +9,23 @@ import java.io.IOException;
 
 public class ClientMain extends Application {
     public static void main(String[] args) {
-        launch();
+        // Lanzar la aplicación JavaFX
+        launch(args);
     }
 
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ClientMain.class.getResource("client.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Client View");
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage stage) {
+        try {
+            // Cargar el archivo FXML
+            FXMLLoader fxmlLoader = new FXMLLoader(ClientMain.class.getResource("/thiar/dah/multiclientchat/client/client.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 700, 700); // Tamaño inicial de la ventana
+            stage.setTitle("Client View");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            // Manejar errores de carga del FXML
+            System.err.println("Error al cargar el archivo FXML: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 }
